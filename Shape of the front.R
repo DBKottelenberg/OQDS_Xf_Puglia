@@ -91,8 +91,8 @@ ggplot() +
   geom_point(data = dat_2[[4]], aes(x = dist, prop, color = "2016"), shape = 1, position = "jitter") +
   geom_point(data = dat_2[[5]], aes(x = dist, prop, color = "2017"), shape = 1, position = "jitter") +
   geom_point(data = dat_2[[6]], aes(x = dist, prop, color = "2018"), shape = 1, position = "jitter") +
-  labs(x = "Distance", 
-       y = "Proportion positive") +
+  labs(x = "Distance (km)", 
+       y = "Proportion positives") +
   scale_y_continuous(limits = c(0, 1.05)) +
   scale_x_continuous(limits = c(0, (max_pos + 60))) +   # Set the maximum x-axis value lower than what is measured to increase readability
   scale_color_manual(name = "Year", values = c("black", "red", "green3", "blue", "orange", "magenta3")) +
@@ -192,8 +192,8 @@ ggplot() +
                 hjust = 0),
             size = 6) +
   labs(subtitle = "Deterministic: Negative exponential; Stochastic: Binomial distribution", 
-       x = "Distance", 
-       y = "Proportion positive") +
+       x = "Distance (km)", 
+       y = "Proportion positives") +
   scale_y_continuous(limits = c(0, 1.05)) +
   scale_x_continuous(limits = c(0, (max_pos + 60))) +   
   scale_color_manual(name = "Year", values = c("black", "red", "green3", "blue", "orange", "magenta3")) +
@@ -270,8 +270,8 @@ ggplot() +
                 hjust = 0),
             size = 6) +
   labs(subtitle = "Deterministic: Negative exponential; Stochastic: Beta-Binomial distribution", 
-       x = "Distance", 
-       y = "Proportion positive") +
+       x = "Distance (km)", 
+       y = "Proportion positives") +
   scale_y_continuous(limits = c(0, 1.05)) +
   scale_x_continuous(limits = c(0,  (max_pos + 60))) +
   scale_color_manual(name = "Year", values = c("black", "red", "green3", "blue", "orange", "magenta3")) +
@@ -348,8 +348,8 @@ ggplot() +
                 hjust = 0),
             size = 6) +
   labs(subtitle = "Deterministic: Logistic function; Stochastic: Binomial distribution",
-       x = "Distance", 
-       y = "Proportion positive") +
+       x = "Distance (km)", 
+       y = "Proportion positives") +
   scale_y_continuous(limits = c(0, 1.05)) +
   scale_x_continuous(limits = c(0,  (max_pos + 60))) +
   scale_color_manual(name = "Year", values = c("black", "red", "green3", "blue", "orange", "magenta3")) +
@@ -426,8 +426,8 @@ ggplot() +
                 hjust = 0),
             size = 6) +
   labs(subtitle = "Deterministic: Logistic function; Stochastic: Beta-Binomial distribution", 
-       x = "Distance", 
-       y = "Proportion positive") +
+       x = "Distance (km)", 
+       y = "Proportion positives") +
   scale_y_continuous(limits = c(0, 1.05)) +
   scale_x_continuous(limits = c(0,  (max_pos + 60))) +
   scale_color_manual(name = "Year", values = c("black", "red", "green3", "blue", "orange", "magenta3")) +
@@ -526,8 +526,8 @@ ggplot() +
                 hjust = 0),
             size = 6) +
   labs(subtitle = "Deterministic: CNE; Stochastic: Binomial distribution", 
-       x = "Distance", 
-       y = "Proportion positive") +
+       x = "Distance (km)", 
+       y = "Proportion positives") +
   scale_y_continuous(limits = c(0, 1.05)) +
   scale_x_continuous(limits = c(0, (max_pos + 60))) +   # Set the maximum x-axis value lower than what is measured to increase readability
   scale_color_manual(name = "Year", values = c("black", "red", "green3", "blue", "orange", "magenta3")) +
@@ -626,8 +626,8 @@ ggplot() +
                 hjust = 0),
             size = 6) +
   labs(subtitle = "Deterministic: CNE; Stochastic: Beta-Binomial distribution", 
-       x = "Distance", 
-       y = "Proportion positive") +
+       x = "Distance (km)", 
+       y = "Proportion positives") +
   scale_y_continuous(limits = c(0, 1.05)) +
   scale_x_continuous(limits = c(0, (max_pos + 60))) +   # Set the maximum x-axis value lower than what is measured to increase readability
   scale_color_manual(name = "Year", values = c("black", "red", "green3", "blue", "orange", "magenta3")) +

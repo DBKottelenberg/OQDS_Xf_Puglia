@@ -5,7 +5,7 @@
 ###########
 
 rm(list = ls())
-setwd("C:/Users/dbkot/OneDrive - WageningenUR/Msc Biology WUR/Thesis/R")
+setwd("C:/Users/dbkot/OneDrive/Documents/Wageningen University/Msc Biology WUR/Thesis/R")
 
 library(readxl)
 library(reshape2)
@@ -105,8 +105,8 @@ ggplot() +
   geom_point(data = dat_3[dat_3$year == 2018,], aes(x = dist, y = prop, color = "2018"), 
              shape = 1) +
   labs(
-    x = "Distance", 
-    y = "Proportion positive") +
+    x = "Distance (km)", 
+    y = "Proportion positives") +
   scale_y_continuous(limits = c(0, 1.05)) +
   scale_x_continuous(limits = c(0,  (max_pos + 60))) +
   scale_color_manual(name = "Year", values = c("black", "red", "green3", "blue", "orange", 
@@ -178,8 +178,8 @@ ggplot() +
                 aes(color = "2017", size = "s")) +
   stat_function(fun = function(x)(1/(1+exp(mlsp_coefs_od[1]*(x - (mlsp_coefs_od[2] + 5*mlsp_coefs_od[3]))))), 
                 aes(color = "2018", size = "s")) +
-  labs(x = "Distance", 
-       y = "Proportion positive") +
+  labs(x = "Distance (km)", 
+       y = "Proportion positives") +
   scale_y_continuous(limits = c(0, 1.05)) +
   scale_x_continuous(limits = c(0,  (max_pos + 60))) +
   scale_color_manual(name = "Year", values = c("black", "red", "green3", "blue", "orange", "magenta3")) +
@@ -447,8 +447,8 @@ ggplot() +
   stat_function(fun = function(x)ifelse((1/exp(-mlsp_coefs_od[1]*(mlsp_coefs_od[2] + ((5) * mlsp_coefs_od[3])))) * exp(-mlsp_coefs_od[1] * x) < 0.999,
                                         (1/exp(-mlsp_coefs_od[1]*(mlsp_coefs_od[2] + ((5) * mlsp_coefs_od[3])))) * exp(-mlsp_coefs_od[1] * x), 0.999), 
                 aes(color = "2018", size = "s")) +
-  labs(x = "Distance", 
-       y = "Proportion positive") +
+  labs(x = "Distance (km)", 
+       y = "Proportion positives") +
   scale_y_continuous(limits = c(0, 1.05)) +
   scale_x_continuous(limits = c(0,  (max_pos + 60))) +
   scale_color_manual(name = "Season", values = c("black", "red", "green3", "blue", "orange", "magenta3")) +
